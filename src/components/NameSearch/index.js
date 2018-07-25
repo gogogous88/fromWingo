@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import logo from "../../logo.svg";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
 import _ from "lodash";
 import "./styles.css";
-import "../../App.css";
 
 export class NameSearch extends Component {
   state = { nameList: [], loading: false, value: "", showResult: false };
@@ -37,7 +35,7 @@ export class NameSearch extends Component {
     });
 
     await this.setState({ nameList: albumList });
-    console.log(this.state.nameList);
+
     setTimeout(() => {
       this.setState({ loading: false });
     }, 1500);
